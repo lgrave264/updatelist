@@ -34,20 +34,22 @@
         <label Bags>Bags:</label>
         <input type="number" id="Bags" name="info">
         <br><p></p>
+        
         <label Food>Food:</label>
         <br><p></p>
         <label id="food" food>Chicken</label>
-        <input type="radio" id="Chicken" name="food" value="Chicken">
+        <input type="radio" id="Food" name="food" value="Chicken">
         <br><p></p>
         <label id="food" food>Steak</label>
-        <input type="radio" id="Steak" name="food" value="Steak">
+        <input type="radio" id="Food" name="food" value="Steak">
         <br><p></p>
         <label id="food" food>Fish</label>
-        <input type="radio" id="Fish" name="food" value="Fish">
+        <input type="radio" id="Food" name="food" value="Fish">
         <br><p></p>
         <label id="food" food>Vegetarian</label>
-        <input type="radio" id="Vegetarian" name="food" value="Vegetarian">
+        <input type="radio" id="Food" name="food" value="Vegetarian">
         <br><p></p>
+            
         <label Extras>Extras:</label>
         <br><p></p>
         <label Extras>Window seat</label>
@@ -65,7 +67,14 @@
         <label Extras>Extra food</label>
         <input type="checkbox" id="Extras" name="Extras" value="Extra food">
         <br><p></p>
+
         <button type="button" name="info" onclick="store(Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras)">submit</button>
+    </fieldset>
+    <fieldset>
+        <legend>Search</legend>
+        <label Id>Search</label>
+        <input type="number" id="Ids">
+        <button type="button" onclick="search(Ids)">Search</button>
     </fieldset>
 </body>
 </html>
