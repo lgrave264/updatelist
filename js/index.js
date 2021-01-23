@@ -1,7 +1,8 @@
 
 var passList=[]; 
 class Passenger {
-    constructor(Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras){
+    constructor(Id , Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras){
+        this.id = ID
         this.Fname = document.getElementById("Fname").value;
         this.Lname = document.getElementById("Lname").value;
         this.Dob = document.getElementById("Dob").value;
@@ -15,9 +16,12 @@ class Passenger {
     }
 }
 
+var ID = 0001
+
 function create(Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras){
     return new Passenger(Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras);
 }
 function store(){
  passList.push(create(Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras))
+ ID ++
 }
