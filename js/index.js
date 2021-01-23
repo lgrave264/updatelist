@@ -1,18 +1,23 @@
+
+var passList=[]; 
 class Passenger {
     constructor(Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras){
-        this.Fname = document.getElementById(Fname).innerHTML;
-        this.Lname = document.getElementById(Lname).innerHTML;
-        this.Dob = document.getElementById(Dob).innerHTML;
-        this.Departure = document.getElementById(Departure).innerHTML;
-        this.Arrival = document.getElementById(Arrival).innerHTML;
-        this.DepartureDate = document.getElementById(DepartureDate).innerHTML;
-        this.ArrivalDate = document.getElementById(ArrivalDate).innerHTML;
-        this.Bags = document.getElementById(Bags).innerHTML;
-        this.Food = document.getElementById(Food).innerHTML;
-        this.Extras = document.getElementById(Extras).innerHTML;
+        this.Fname = document.getElementById("Fname").value;
+        this.Lname = document.getElementById("Lname").value;
+        this.Dob = document.getElementById("Dob").value;
+        this.Departure = document.getElementById("Departure").value;
+        this.Arrival = document.getElementById("Arrival").value;
+        this.DepartureDate = document.getElementById("DepartureDate").value;
+        this.ArrivalDate = document.getElementById("ArrivalDate").value;
+        this.Bags = document.getElementById("Bags").value;
+        this.Food = document.getElementById("Food").value;
+        this.Extras = document.getElementById("Extras").value;
     }
 }
 
-function store{
-    var mike = new Passenger(Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras);
+function create(Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras){
+    return new Passenger(Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras);
+}
+function store(){
+ passList.push(create(Fname , Lname , Dob , Departure , Arrival , DepartureDate , ArrivalDate , Bags , Food , Extras))
 }
